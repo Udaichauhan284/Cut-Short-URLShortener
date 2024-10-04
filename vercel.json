@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:id", 
+      "destination": "/api/redirect/:id", 
+      "permanent": true
+    }
+  ]
+}

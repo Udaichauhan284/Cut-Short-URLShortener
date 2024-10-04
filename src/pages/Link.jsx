@@ -78,12 +78,12 @@ const Link = () => {
             {url?.title}
           </span>
           <a
-            href={`${baseURL}/${link}` || `https://localhost:5173/${link}`} // Ensure this link is properly formed
+            href={`https://cutshorturl.vercel.app/${link}`} // Ensure this link is properly formed
             target="_blank" // Opens in a new tab
             rel="noopener noreferrer" // Security measure
             className="text-xl sm:text-2xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            {`${baseURL}/${link}`}
+            {`https://cutshorturl.vercel.app/${link}`}
           </a>
           <a
             href={url?.original_url}
@@ -100,7 +100,7 @@ const Link = () => {
             <Button
               variant="ghost"
               onClick={() =>
-                navigator.clipboard.writeText(`${baseURL}/${link}`)
+                navigator.clipboard.writeText(`https://cutshorturl.vercel.app/${link}`)
               }
             >
               <Copy />

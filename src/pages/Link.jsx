@@ -66,11 +66,7 @@ const Link = () => {
   if (url) {
     link = url?.custom_url ? url?.custom_url : url?.short_url;
   }
-  const getFullUrl = (link) => {
-    if (!link) return '';
-    const baseURL = import.meta.env.VITE_BASE_URL || 'https://your-vercel-domain.vercel.app';
-    return `${baseURL}/${link}`;
-  };
+
 
   return (
     <>
@@ -83,7 +79,7 @@ const Link = () => {
             {url?.title}
           </span>
           <a
-            href={`${baseURL}/${link}` || `https://cutshorturl.vercel.app/${link}`} // Ensure this link is properly formed
+            href={`/${link}`} // Ensure this link is properly formed
             target="_blank" // Opens in a new tab
             rel="noopener noreferrer" // Security measure
             className="text-xl sm:text-2xl text-blue-400 font-bold hover:underline cursor-pointer"

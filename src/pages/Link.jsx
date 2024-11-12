@@ -79,12 +79,12 @@ const Link = () => {
             {url?.title}
           </span>
           <a
-            href={`/${link}`} // Ensure this link is properly formed
+            href={`https://cutshort-udproject.netlify.app/${link}`} // Ensure this link is properly formed
             target="_blank" // Opens in a new tab
             rel="noopener noreferrer" // Security measure
             className="text-xl sm:text-2xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            {`${baseURL}/${link}` || `https://cutshorturl.vercel.app/${link}`}
+            {`${baseURL}/${link}` || `https://cutshort-udproject.netlify.app/${link}`}
           </a>
           <a
             href={url?.original_url}
@@ -101,7 +101,7 @@ const Link = () => {
             <Button
               variant="ghost"
               onClick={() =>
-                navigator.clipboard.writeText(`${baseURL}/${link}` || `https://cutshorturl.vercel.app/${link}`)
+                navigator.clipboard.writeText(`${baseURL}/${link}` || `https://cutshort-udproject.netlify.app/${link}`)
               }
             >
               <Copy />
